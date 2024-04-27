@@ -1,22 +1,3 @@
-import axios from 'axios';
-const instance = axios.create({
-  baseURL: "https://662a6adb67df268010a3d812.mockapi.io/",
-});
-
-
-export const requestContactsDetailsById = async () => {
-  const { data } = await instance.get(`contacts/`);
-  return data;
-};
-
-
-
-
-
-
-
-
-
 // import axios from 'axios';
 // const instance = axios.create({
 //   baseURL: "https://api.themoviedb.org/3/",
