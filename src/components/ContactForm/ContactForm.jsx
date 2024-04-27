@@ -11,7 +11,7 @@ import {
 import css from '../ContactForm/ContactForm.module.css';
 import { useDispatch } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
-import { addContacts } from '../../redux/contactsSlice';
+import { addContact } from '../../redux/contactsOps';
 
 const ContactFormSchema = yup.object().shape({
   name: yup
@@ -42,7 +42,7 @@ export default function ContactForm() {
   const dispatch = useDispatch();
   const handleSubmit = (values, actions) => {
     values.id = nanoid();
-    dispatch(addContacts(values));
+    dispatch(addContact(values));
     actions.resetForm();
   };
   return (
